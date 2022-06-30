@@ -15,11 +15,24 @@ namespace BasicFor_LoopsLab
         public static int GetInt(int low)
         {
             int x;
+            bool isNumber;
             do
             {
                 Console.Clear();
                 Console.Write("Please enter a number: ");
-            } while(!int.TryParse(Console.ReadLine(), out x) || x < low);
+                if(int.TryParse(Console.ReadLine(), out x) || x > low)
+                {
+
+                    isNumber = false;
+                }
+                else
+                {
+                    Console.WriteLine("Sorry that is not a valid number");
+                    Thread.Sleep(2000);
+                    isNumber = true;
+                }
+
+            } while(isNumber);
             Console.Clear();
             return x;
         }
@@ -52,6 +65,21 @@ namespace BasicFor_LoopsLab
                     Thread.Sleep(2000);
                 }
             } while(true);
+        }
+
+        /// <summary>
+        /// Totals all the numbers from 0 to the user input
+        /// </summary>
+        /// <param name="x">User number</param>
+        /// <returns>Total</returns>
+        public static int Total(int x)
+        {
+            int total = 0;
+            for(int i = 0; i <= x; i++)
+            {
+                total += i;
+            }
+            return total;
         }
 
     }

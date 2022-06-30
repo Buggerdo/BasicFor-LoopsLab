@@ -13,18 +13,10 @@ namespace BasicFor_LoopsLab
             do
             {
                 int number = Tools.GetInt(1);
-                Console.WriteLine(Total(number));
+                Console.WriteLine(Tools.Total(number));
             } while(Tools.IsYes());
         }
 
-        private static int Total(int x)
-        {
-            int total = 0;
-            for(int i = 0; i <= x; i++)
-            {
-                total += i;
-            }
-            return total;
-        }
+
     }
 }
