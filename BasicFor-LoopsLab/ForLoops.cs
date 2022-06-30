@@ -12,9 +12,9 @@ namespace BasicFor_LoopsLab
         {
             do
             {
-                int number = Tools.GetInt(1);
+                int number = Get.GetInt(1);
                 Console.WriteLine(Tools.Total(number));
-            } while(Tools.IsYes());
+            } while(IsYes.IsAgain());
         }
 
 
