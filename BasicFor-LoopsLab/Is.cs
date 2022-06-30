@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BasicFor_LoopsLab
 {
-    internal class IsYes
+    internal class Is
     {
         /// <summary>
         /// Askes user if they would like to continue player
